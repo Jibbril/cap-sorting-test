@@ -105,7 +105,9 @@
           "options": {
             "settings": {
               "entitySet": "Books",
+              "contextPath": "/Books",
               "variantManagement": "Page",
+              "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#DefaultFilter",
               "navigation": {
                 "Books": {
                   "detail": {

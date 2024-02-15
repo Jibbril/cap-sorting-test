@@ -1,6 +1,21 @@
 using MyService as service from '../../srv/my-service';
 
 annotate service.Books with @(
+    UI.SelectionPresentationVariant #DefaultFilter           : {
+        Text                : 'MY TEXT',
+        SelectionVariant    : {
+            Text          : 'MY TEXT',
+            SelectOptions : []
+        },
+        PresentationVariant : ![@UI.PresentationVariant]
+    },
+
+    UI.PresentationVariant                             : {
+        MaxItems       : 4,
+        SortOrder      : [{Property : name}],
+        Visualizations : ['@UI.LineItem']
+    },
+
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
